@@ -3,7 +3,7 @@
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;            // The speed that the player will move at.
-
+    public float jumpSpeed = 3f;
     Vector3 movement;                   // The vector to store the direction of the player's movement.
     //Animator anim;                      // Reference to the animator component.
     Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
@@ -30,11 +30,16 @@ public class PlayerMovement : MonoBehaviour
         // Move the player around the scene.
         Move(h, v);
 
+        if (Input.GetKeyDown("space"))
+        {
+            transform.Translate(Vector3.up * jumpSpeed * Time.deltaTime, Space.World);
+        }
+
         // Turn the player to face the mouse cursor.
-        Turning();
+        // Turning();
 
         // Animate the player.
-        Animating(h, v);
+        // Animating(h, v);
     }
 
     void Move(float h, float v)
@@ -47,11 +52,9 @@ public class PlayerMovement : MonoBehaviour
 
         // Move the player to it's current position plus the movement.
         playerRigidbody.MovePosition(transform.position + movement);
-
-        transform.LookAt(direction);
     }
 
-    void Turning()
+    /*void Turning()
     {
         // Create a ray from the mouse cursor on screen in the direction of the camera.
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -76,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /*void Animating(float h, float v)
+    void Animating(float h, float v)
     {
         // Create a boolean that is true if either of the input axes is non-zero.
         bool walking = h != 0f || v != 0f;
