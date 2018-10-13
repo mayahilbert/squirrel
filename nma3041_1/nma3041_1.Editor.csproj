@@ -340,13 +340,13 @@
       <Project>{D70F9807-9186-278E-F10F-8457A98F6E88}</Project>
       <Name>nma3041_1</Name>
     </ProjectReference>
-    <ProjectReference Include="nma3041_1.Plugins.csproj">
-      <Project>{5E2270B3-D827-C126-1B3C-E36EEFB0BA0C}</Project>
-      <Name>nma3041_1.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="nma3041_1.csproj">
       <Project>{D70F9807-9186-278E-F10F-8457A98F6E88}</Project>
       <Name>nma3041_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="nma3041_1.Plugins.csproj">
+      <Project>{5E2270B3-D827-C126-1B3C-E36EEFB0BA0C}</Project>
+      <Name>nma3041_1.Plugins</Name>
     </ProjectReference>
     <ProjectReference Include="nma3041_1.Editor.Plugins.csproj">
       <Project>{E162C964-A886-F8E5-FA5B-9011646F1334}</Project>
@@ -362,7 +362,6 @@
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-    <None Include="Assets\SurvivalShooter_Third-PartyNotice.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
